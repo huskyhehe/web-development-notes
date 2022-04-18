@@ -20,25 +20,26 @@ example`string text ${expression} string text`
 ```
 
 
-# array.map()
-1. What does the `.map()` array method do?
+# Array.map()
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+1. What does the `.map()` array method do?  
 Returns a new array. Whatever gets returned from the callback
 function provided is placed at the same index in the new array.
 Usually we take the items from the original array and modify them
 in some way.
 
 
-2. What do we usually use `.map()` for in React?
+2. What do we usually use `.map()` for in React?  
 Convert an array of raw data into an array of JSX elements
 that can be displayed on the page.
 
 
 3. Why is using `.map()` better than just creating the components
-   manually by typing them out?
+   manually by typing them out?  
 It makes our code more "self-sustaining" - not requiring
 additional changes whenever the data changes.
 
-**Challenge 1:**
+### Challenge 1:
 Given an array of numbers, return an array of each number, squared
 ```javascript
 const nums = [1, 2, 3, 4, 5]
@@ -50,7 +51,7 @@ const squares = nums.map(function(num) {
 });
 ```
 
-**Challenge 2:**
+### Challenge 2:
 Given an array of strings, return an array where 
 the first letter of each string is capitalized
 ```javascript
@@ -63,7 +64,7 @@ const capitalized = names.map((name) => {
 });
 ```
 
-**Challenge 3:**
+### Challenge 3:
 Given an array of strings, return an array of strings that wraps each
 of the original strings in an HTML-like <p></p> tag.
 
