@@ -6,7 +6,7 @@ export default function Card({item}) {
         badgeText = "SOLD OUT"
     } else if (item.location === "Online") {
         badgeText = "ONLINE"
-    }
+    };
 
     /*
     Challenge:
