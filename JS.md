@@ -1,4 +1,4 @@
-# Backtick 模板字符串
+# Backtick
 
 模板字符串使用反引号 (` `) 来代替普通字符串中的用双引号和单引号
 ```javascript
@@ -37,3 +37,47 @@ that can be displayed on the page.
    manually by typing them out?
 It makes our code more "self-sustaining" - not requiring
 additional changes whenever the data changes.
+
+Challenge 1:
+Given an array of numbers, return an array of each number, squared
+```javascript
+const nums = [1, 2, 3, 4, 5]
+// -->       [1, 4, 9, 16, 25]
+
+// Your code here
+const squares = nums.map(function(num) {
+    return num * num
+});
+```
+
+Challenge 2:
+Given an array of strings, return an array where 
+the first letter of each string is capitalized
+```javascript
+const names = ["alice", "bob", "charlie", "danielle"]
+// -->        ["Alice", "Bob", "Charlie", "Danielle"]
+
+// Your code here
+const capitalized = names.map((name) => {
+    return name[0].toUpperCase() + name.slice(1)
+});
+```
+
+Challenge 3:
+Given an array of strings, return an array of strings that wraps each
+of the original strings in an HTML-like <p></p> tag.
+
+E.g. given: ["Bulbasaur", "Charmander", "Squirtle"]
+return: ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+```javascript
+const pokemon = ["Bulbasaur", "Charmander", "Squirtle"];
+// -->          ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
+// Your code here
+
+const paragraphs = pokemon.map((mon) => {
+    return `<p>${mon}</p>`
+});
+```
+
+# Spread Syntax
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax
