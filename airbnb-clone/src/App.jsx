@@ -14,7 +14,7 @@ export default function App() {
                 item={item}         // {...item}
             />
         )
-    })        
+    });       
     
     return (
         <div>
