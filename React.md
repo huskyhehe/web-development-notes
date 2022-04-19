@@ -41,5 +41,3 @@ export default function App() {
     );
 }
 ```
-=======
->>>>>>> 992febde541f282f12f252f5bba20546348bff61
