@@ -26,8 +26,7 @@ export default function App() {
     
     function add() {
         setCount(prevCount => prevCount + 1)
-    };
-    
+    };    
     function subtract() {
         setCount(prevCount => prevCount - 1)
     };
