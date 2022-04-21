@@ -1,18 +1,40 @@
-import React from "react"
+import React, {useState} from "react"
 import memesData from "./memesData.js"
 
 export default function Meme() {
-    const [memeImage, setMemeImage] = React.useState("")
     /**
-     * Challenge: Save the random meme URL in state
-     * - Below the div.form, add an <img /> and set the
-     *   src to the new `memeImage` state you created
+     * Challenge: Update our state to save the meme-related
+     * data as an object called `meme`. It should have the
+     * following 3 properties:
+     * topText, bottomText, randomImage.
+     * 
+     * The 2 text states can default to empty strings for now,
+     * amd randomImage should default to "http://i.imgflip.com/1bij.jpg"
+     * 
+     * Next, create a new state variable called `allMemeImages`
+     * which will default to `memesData`, which we imported above
+     * 
+     * Lastly, update the `getMemeImage` function and the markup 
+     * to reflect our newly reformed state object and array in the
+     * correct way.
      */
-    
+    const [meme, setMeme] = useState({
+        topText: "",
+        bottomTex: "",
+        randomImage: "http://i.imgflip.com/1bij.jpg"
+    });
+
+    const [allMemeImages, setAllMemeImages] = useState(memesData);
+
+   
     function getMemeImage() {
-        const memesArray = memesData.data.memes
-        const randomNumber = Math.floor(Math.random() * memesArray.length)
-        setMemeImage(memesArray[randomNumber].url)
+        const memesArray = memesData.data.memes;
+        const randomNumber = Math.floor(Math.random() * memesArray.length);
+        const url = memesArray[randomNumber].url;
+        setMeme(prevMeme => ({
+            ...meme,
+            randomImage: url
+        }))
         
     }
     
@@ -36,7 +58,7 @@ export default function Meme() {
                     Get a new meme image 🖼
                 </button>
             </div>
-            <img src={memeImage} className="meme--image" />
+            <img src={meme.randomImage} className="meme--image" />
         </main>
     )
 }
