@@ -85,29 +85,7 @@ const paragraphs = pokemon.map((mon) => {
 
 # Spread Syntax
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax
-```javascript
-import React from 'react';
-import ReactDOM from 'react-dom';
 
-function App() {
-    const [thingsArray, setThingsArray] = React.useState(["Thing 1", "Thing 2"])
-    
-    function addItem() {
-        setThingsArray(prevState => {
-            return [...prevState, `Thing ${prevState.length + 1}`]
-        })
-    }
-    
-    const thingsElements = thingsArray.map(thing => <p key={thing}>{thing}</p>)
-    
-    return (
-        <div>
-            <button onClick={addItem}>Add Item</button>
-            {thingsElements}
-        </div>
-    )
-}
-```
 
 # State
 1. How would you describe the concept of "state"?  
