@@ -110,3 +110,18 @@ export default function App() {
     )
 }
 ```
+
+# img in the src/ folder
+```javascript
+const displayLogos = logos.map((logo) => (
+    <li key={logo} className="tech-logo">
+        <img
+            key={logo}
+            src={require(`../../images/tech-logos/${logo}.png`).default}
+            alt={`${logo} logo`}
+            height="30px"
+            width="30px"
+        />
+    </li>
+));
+```
